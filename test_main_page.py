@@ -13,14 +13,15 @@ class TestLoginFromMainPage():
     def setup(self, browser):
         self.link = main_page_url
         self.page = MainPage(browser, self.link)
-        self.page.open()
 
     def test_guest_can_go_to_login_page(self, browser):
+        self.page.open()
         self.page.go_to_login_page()
         login_page = LoginPage(browser, browser.current_url)
         login_page.should_be_login_page()
 
     def test_guest_should_see_login_link(self, browser):
+        self.page.open()
         self.page.should_be_login_link()
 
 
