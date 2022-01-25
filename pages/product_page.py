@@ -1,6 +1,7 @@
 from .base_page import BasePage
 from .locators import ProductPageLocators
 
+
 class ProductPage(BasePage):
     def should_be_correct_addition_to_basket(self):
         self.should_be_correct_product_name_in_basket()

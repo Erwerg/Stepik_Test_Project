@@ -21,9 +21,6 @@ class BasePage():
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
-        # alert = self.browser.switch_to.alert
-        # alert.accept()
-
     def open(self):
         self.browser.get(self.url)
 
